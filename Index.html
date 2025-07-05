@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>บริษัท พรีซิชั่น ซิสเต็ม จำกัด</title>
+  <title>หน้าหลัก | บริษัท พรีซิชั่น ซิสเต็ม จำกัด</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Prompt', sans-serif;
@@ -30,11 +30,35 @@
       color: #2062a8;
     }
 
+    .navbar .nav-link.active {
+      font-weight: bold;
+      color: #2062a8 !important;
+    }
+
     .hero {
-      background: linear-gradient(135deg, #e6f3ff, #d0e9ff);
       color: #003c72;
       padding: 100px 20px;
       text-align: center;
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(230, 243, 255, 0.85);
+      z-index: 1;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
     }
 
     .hero h1 {
@@ -71,20 +95,25 @@
 
     .service-box {
       background: #ffffff;
-      padding: 30px;
+      padding: 25px;
       border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
       transition: 0.3s ease;
+      height: 100%;
     }
 
     .service-box:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
       box-shadow: 0 12px 24px rgba(0,0,0,0.12);
     }
 
     .service-box h5 {
+      font-weight: 600;
       color: #007bff;
+    }
+
+    .card-title {
+      color: #003c72;
       font-weight: 600;
     }
 
@@ -140,24 +169,6 @@
 </head>
 <body>
 
-<!-- Top Bar -->
-<div class="topbar">
-  <div class="container d-flex justify-content-between">
-    <div>โทร: 096-836-1738</div>
-    <div class="social-icons">
-      <a href="https://line.me/R/ti/p/@882fuzbs" target="_blank">
-        <img src="https://img.icons8.com/color/24/line-me.png" alt="Line" />
-      </a>
-      <a href="https://m.me/PrecisionIT.Store" target="_blank">
-        <img src="https://img.icons8.com/color/24/facebook-messenger.png" alt="Messenger" />
-      </a>
-      <a href="https://www.youtube.com/@PrecisionIT" target="_blank">
-        <img src="https://img.icons8.com/color/24/youtube-play.png" alt="YouTube" />
-      </a>
-    </div>
-  </div>
-</div>
-
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
   <div class="container">
@@ -181,46 +192,43 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="container">
-    <h1>ยกระดับธุรกิจของคุณ ด้วยโซลูชันไอทีที่ครบวงจร</h1>
-    <p>เชี่ยวชาญด้านการวางระบบ ดูแล และรักษาความปลอดภัยด้าน IT ครบวงจร พร้อมบริการที่ปรึกษาโดยผู้เชี่ยวชาญ</p>
+    <h1>ยกระดับธุรกิจของคุณ ด้วยโซลูชันไอทีครบวงจร</h1>
+    <p>เราคือผู้เชี่ยวชาญด้านระบบไอที ที่พร้อมดูแล ออกแบบ และพัฒนาโครงสร้างระบบให้ธุรกิจของคุณเติบโตอย่างยั่งยืน</p>
     <a href="contact.html" class="btn-contact">ติดต่อเรา</a>
   </div>
 </section>
 
-<!-- Services -->
+<!-- Services Section -->
 <section class="py-5 bg-light">
   <div class="container">
     <h2 class="section-title">บริการของเรา</h2>
     <div class="row g-4">
-      <div class="col-md-3">
-        <div class="service-box h-100">
-          <h5>Cloud Solutions</h5>
-          <p>บริการคลาวด์และโซลูชันไอทีที่ช่วยเพิ่มความยืดหยุ่นให้ธุรกิจ</p>
+      <div class="col-md-4">
+        <div class="service-box">
+          <h5>IT Infrastructure Solutions</h5>
+          <p>ให้คำปรึกษาและออกแบบระบบเครือข่าย เซิร์ฟเวอร์ ระบบจัดเก็บข้อมูล และอุปกรณ์สำนักงานครบวงจร</p>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="service-box h-100">
-          <h5>Systems Integration</h5>
-          <p>วางระบบและผสานโซลูชันไอทีให้ทำงานร่วมกันอย่างมีประสิทธิภาพ</p>
+      <div class="col-md-4">
+        <div class="service-box">
+          <h5>IT Support & Maintenance</h5>
+          <p>บริการดูแลระบบคอมพิวเตอร์ทั้งแบบรายเดือนและรายครั้ง พร้อม Remote Support และ On-site</p>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="service-box h-100">
-          <h5>Cyber Security</h5>
-          <p>ปกป้องข้อมูลสำคัญด้วยระบบรักษาความปลอดภัยมาตรฐานสากล</p>
+      <div class="col-md-4">
+        <div class="service-box">
+          <h5>IT Security Solutions</h5>
+          <p>ติดตั้ง Firewall, Anti-virus, ระบบป้องกัน Ransomware และให้คำปรึกษาด้าน Cyber Security</p>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="service-box h-100">
-          <h5>IT Maintenance</h5>
-          <p>บริการดูแลและบำรุงรักษาระบบไอทีทั้งแบบรายเดือนและรายครั้ง</p>
-        </div>
-      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="services.html" class="btn btn-outline-primary">ดูบริการทั้งหมด</a>
     </div>
   </div>
 </section>
 
-<!-- Articles Preview Section -->
+<!-- Articles Section -->
 <section class="py-5">
   <div class="container">
     <h2 class="section-title">บทความล่าสุด</h2>
@@ -228,27 +236,27 @@
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <div class="card-body">
-            <h5 class="card-title">5 วิธีป้องกันข้อมูลธุรกิจรั่วไหล</h5>
-            <p class="card-text">การป้องกันข้อมูลรั่วไหลในองค์กรไม่ใช่เรื่องยาก หากรู้จักใช้เครื่องมือและวางแผนให้ถูกต้อง...</p>
-            <a href="articles.html" class="btn btn-sm btn-primary">อ่านเพิ่มเติม</a>
+            <h5 class="card-title">5 แนวทางดูแลระบบไอทีในองค์กรขนาดเล็ก</h5>
+            <p class="card-text">เคล็ดลับในการจัดการระบบคอมพิวเตอร์ให้ปลอดภัย มีประสิทธิภาพ และลดค่าใช้จ่ายโดยไม่ต้องมีทีมไอทีประจำ...</p>
+            <a href="articles.html" class="btn btn-sm btn-outline-primary">อ่านเพิ่มเติม</a>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <div class="card-body">
-            <h5 class="card-title">Cloud กับ Server ต่างกันยังไง?</h5>
-            <p class="card-text">หลายองค์กรกำลังตัดสินใจว่าจะใช้ Cloud หรือ Server ดี บทความนี้มีคำตอบที่คุณควรรู้...</p>
-            <a href="articles.html" class="btn btn-sm btn-primary">อ่านเพิ่มเติม</a>
+            <h5 class="card-title">Firewall สำคัญแค่ไหนในยุค Cyber Attack?</h5>
+            <p class="card-text">หลายธุรกิจยังไม่รู้ว่า Firewall ไม่ได้แพงอย่างที่คิด และเป็นด่านแรกในการป้องกันข้อมูลรั่วไหล...</p>
+            <a href="articles.html" class="btn btn-sm btn-outline-primary">อ่านเพิ่มเติม</a>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <div class="card-body">
-            <h5 class="card-title">เริ่มต้นดูแลระบบ IT สำหรับบริษัทเล็ก</h5>
-            <p class="card-text">บริษัทเล็ก ๆ ก็สามารถมีระบบไอทีที่มีประสิทธิภาพได้ ด้วยแนวทางง่าย ๆ จากผู้เชี่ยวชาญ...</p>
-            <a href="articles.html" class="btn btn-sm btn-primary">อ่านเพิ่มเติม</a>
+            <h5 class="card-title">Remote Support คืออะไร? ดีกว่า On-site ยังไง?</h5>
+            <p class="card-text">รู้จักกับ Remote IT Support และวิธีที่ช่วยให้ธุรกิจของคุณประหยัดเวลาและค่าใช้จ่ายได้ในทันที...</p>
+            <a href="articles.html" class="btn btn-sm btn-outline-primary">อ่านเพิ่มเติม</a>
           </div>
         </div>
       </div>
